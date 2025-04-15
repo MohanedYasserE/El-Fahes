@@ -1,0 +1,196 @@
+:root {
+    --main-color: #d2f3fc;
+    --secondary-color: #004097;
+    --font-color: #001b51;
+    --third-color:#abecff;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: "Zain", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    flex-direction: row-reverse;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--font-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        background-color: var(--main-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: 0.5s ease-in;
+        z-index: 1;
+        gap: 30px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+nav a{
+    text-decoration: none;
+    color:var(--font-color);
+    font-size: 25px;
+    padding: 6px 13px;
+}
+nav a:hover{
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-color: var(--secondary-color);
+}
+#logo{
+    width: 100px;
+}
+main{
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+#mainimg{
+    width: 780px;
+}
+#title{
+    font-size: 80px;
+    color: var(--font-color);
+    font-weight: 900;
+}
+#sec_title{
+    font-size: 26px;
+    color: var(--secondary-color);
+    font-weight: 900;
+    padding: 10px;
+    border: #004097 2px solid;
+    border-radius: 20px;
+    text-align: center;
+}
+#system_btn{
+    background-color: var(--font-color);
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 900;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.right{
+    padding-right: 10px;
+}
+.right p{
+    font-size: 19px;
+    color: var(--font-color);
+}
+
+/* Add these media queries at the end of your CSS file */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    nav img {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #mainimg {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px 0;
+    }
+
+    #title {
+        font-size: 40px;
+    }
+
+    #sec_title {
+        font-size: 20px;
+    }
+
+    .right {
+        padding-right: 0;
+    }
+
+    .right p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        z-index: 2;
+    }
+
+    #sec_title {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+}

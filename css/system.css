@@ -1,0 +1,486 @@
+:root {
+    --main-color: #d2f3fc;
+    --secondary-color: #004097;
+    --font-color: #001b51;
+    --third-color:#abecff;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: "Zain", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    position: sticky; /* يجعل العنصر ثابتًا بعد التمرير */
+    top: 1px; /* يبدأ التثبيت عندما يصل إلى هذا الموضع */
+    background-color: white;
+}
+nav a{
+    text-decoration: none;
+    color:var(--font-color);
+    font-size: 22px;
+    padding: 6px 13px;
+}
+nav a:hover{
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-color: var(--secondary-color);
+}
+#logo{
+    width: 100px;
+}
+/* the main content */
+
+main{
+    display: flex;
+    width:100%;
+    /* height: 85vh; */
+}
+aside{
+    width: 25%;
+    height: 85vh;
+    background-color:var(--font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    position: fixed;
+}
+aside h1{
+  color: var(--third-color);
+  font-size: 35px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+aside li{
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+aside li:hover , #active{
+    background-color: var(--main-color);
+}
+aside li:hover a , #active{
+    color: var(--font-color);
+}
+
+aside li a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    text-align: center;
+}
+.contact-cards {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 70px;
+}
+section{
+    width: 73%;
+    height: 100%;
+    background-color: var(--main-color);
+    margin-left: 2%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 28%;
+}
+section h1{
+    color: var(--font-color);
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+section select{
+    width: 50%;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: 2px solid var(--font-color);
+    padding: 5px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+#diagnosis{
+    background-color: var(--font-color);
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 900;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    width: 50%;
+}
+#diagnosis:hover{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+#solve{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+#symptoms{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+#solve h2{
+    font-size: 24;
+    color: var(--font-color);
+}
+#solve video{
+    width: 45%;
+    border-radius: 15px; 
+    align-self: center;
+}
+#solve ul {
+    list-style-type: disc;
+    padding-right: 20px;
+    margin: 10px 0;
+}
+
+#solve select {
+    margin: 20px 0;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+
+#solve h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+.about{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.admin , .creation{
+  color: var(--font-color);  
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 500px;
+  height: 470px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.admin h1{
+  color: #004097;
+}
+.creator{
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    align-items: center;
+    margin-top: 15px;
+}
+.creator img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+}
+.logos{
+ display: flex; 
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+.logos img{
+    width: 60px;
+    height: 70px;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--font-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        background-color: var(--main-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: 0.5s ease-in;
+        z-index: 1;
+        gap: 30px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Burger animation */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 15px 0;
+        position: sticky;
+    }
+
+    aside h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    aside li {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    aside li a {
+        font-size: 18px;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        padding: 15px 0;
+        min-height: 50vh;
+    }
+
+    section h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    section select {
+        width: 90%;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    aside h1 {
+        font-size: 24px;
+    }
+
+    aside li a {
+        font-size: 16px;
+    }
+
+    section h1 {
+        font-size: 24px;
+    }
+
+    section select {
+        font-size: 16px;
+    }
+}
+
+/* أنماط صفحة الاتصال */
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    direction: rtl;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 70px;
+}
+
+.contact-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 18px;
+}
+
+.contact-btn:hover {
+    background-color: var(--font-color);
+    transform: scale(1.05);
+}
+
+/* تعديلات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* تعديلات صفحة about للهواتف */
+    .about {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 15px;
+    }
+    
+    .admin, .creation {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .creator {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .creator img {
+        margin-bottom: 10px;
+    }
+    
+    .logos img {
+        width: 50px;
+        height: 60px;
+    }
+    
+    /* تعديلات إضافية لصفحة الاتصال */
+    .contact-container {
+        padding: 0 15px;
+        margin: 30px auto;
+    }
+    
+    .contact-title {
+        font-size: 24px;
+    }
+    
+    .card-icon {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/system.css">
+    <title>الفاحص</title>
+</head>
+<body>
+    <nav>
+        <img src="../images/logo.png" alt="logo" id="logo">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">الصفحة الرئيسية </a>
+            <a href="system.html">النظام</a>
+            <a href="about.html">عنا</a>
+            <a href="contact_us.html">اتصل بنا</a>
+        </div>
+    </nav>
+
+<main>
+    <aside>
+        <h1>نظام الفاحِصُ</h1>
+        <ul>
+            <li ><a href="system.html"> اعطال الهاردوير</a></li>
+            <li id="active"><a href="software.html" id="active">اعطال البرمجيات و نظم التشغيل</a></li>
+            <li><a href="network.html">اعطال الشبكة و الاتصال</a></li>
+            <li><a href="terminal.html">اعطال الطرفيات</a></li>
+            <li><a href="protection.html">الوقاية من الاعطال </a></li>
+        </ul>
+
+    </aside>
+    <section>
+        <h1>اعطال البرمجيات و نظم التشغيل </h1>
+        <select id="issue">
+            <option value="0">اختر مشكلة</option>
+            <option value="1">ظهور شاشة زرقاء مفاجئة تحتوي على رسالة خطأ</option>
+            <option value="2">بطء أداء النظام</option>
+            <option value="3">توقف التطبيقات عن الاستجابة</option>
+            <option value="4">عدم القدرة على الاتصال بالإنترنت</option>
+            <option value="5">عدم عمل الأجهزة بشكل صحيح (الصوت، الفيديو، الطابعة، إلخ).</option>
+            <option value="6">مشاكل في تحديثات نظام التشغيل</option>
+            <option value="7">مشاكل في تسجيل الدخول</option>
+            <option value="8">مشاكل في الصوت</option>
+            <option value="9">مشاكل في الطباعة</option>
+            <option value="10">مشاكل في شاشة العرض</option>
+        </select>
+        <div id="solve">
+
+            <!-- <button id="diagnosis" onclick="symptoms()">تشخيص العطل</button> -->
+        </div>
+    </section>
+</main>
+
+<script src="../js/software.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>
